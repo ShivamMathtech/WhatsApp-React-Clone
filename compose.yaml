@@ -1,0 +1,16 @@
+services:
+  app:
+    build: .
+    ports:
+      - '127.0.0.1:3001:3001'
+    environment:
+      APP_ORIGIN: ${APP_ORIGIN:-http://localhost:3001}
+      COOKIE_SECURE: ${COOKIE_SECURE:-false}
+      TRUST_PROXY: ${TRUST_PROXY:-0}
+      ICE_SERVERS_JSON: ${ICE_SERVERS_JSON:-}
+      MAX_UPLOAD_MB: ${MAX_UPLOAD_MB:-20}
+    volumes:
+      - chat-data:/app/data
+    restart: unless-stopped
+volumes:
+  chat-data:

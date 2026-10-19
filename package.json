@@ -1,0 +1,41 @@
+{
+  "name": "whatsapp-react-clone",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "WhatsApp-inspired React messenger with a persistent Node.js backend",
+  "engines": {
+    "node": ">=24.0.0 <25"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "vite build",
+    "start": "node --env-file-if-exists=.env server/index.mjs",
+    "seed": "node --env-file-if-exists=.env server/seed.mjs",
+    "test": "node --test --test-concurrency=1 tests/api.test.mjs",
+    "test:ui": "vitest run",
+    "check": "npm run test && npm run test:ui && npm run build",
+    "setup": "node scripts/setup.mjs",
+    "format": "prettier --write src server scripts tests docs *.md *.js *.json *.yaml"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "lucide-react": "^0.468.0",
+    "multer": "^2.0.2",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@vitejs/plugin-react": "^5.0.4",
+    "jsdom": "^26.1.0",
+    "prettier": "^3.9.10",
+    "vite": "^7.1.12",
+    "vitest": "^5.0.5"
+  }
+}

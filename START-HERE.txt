@@ -1,0 +1,56 @@
+WHATSAPP REACT CLONE - START HERE
+================================
+
+This ZIP contains the complete React source, Node.js server, SQLite database
+schema, compiled frontend, automated tests, and setup scripts.
+
+WINDOWS QUICK START
+1. Install Node.js 24.x LTS from https://nodejs.org/
+2. Extract this entire ZIP to a normal folder, for example:
+   C:\Projects\WhatsApp-React-Clone
+3. Open that folder and double-click setup_windows.bat.
+   The first setup needs internet to download npm packages.
+4. After setup succeeds, double-click start_windows.bat.
+5. Open http://localhost:3001 in Chrome or Edge.
+6. Keep the terminal open while using the application.
+
+DEMO LOGIN
+Shivam:  shivam@demo.local   / DemoChat@123
+Mahnoor: mahnoor@demo.local  / DemoChat@123
+
+TEST A REAL TWO-USER CHAT
+Sign in as Shivam in a normal browser window.
+Sign in as Mahnoor in an Incognito/InPrivate window.
+Open their conversation in both windows and send messages.
+Two normal tabs share the same login cookie; use separate browser profiles
+or an Incognito window to test two different accounts.
+
+COMMAND LINE ALTERNATIVE
+Open a terminal in this project folder:
+  node scripts/setup.mjs
+  npm start
+
+DEVELOPMENT
+  npm run dev
+Open http://localhost:5173. The API runs on port 3001.
+
+IMPORTANT SCOPE
+This is a responsive web application inspired by the supplied mobile design.
+It uses its own email/password accounts, not phone OTP or real WhatsApp login.
+It does not implement WhatsApp's end-to-end message encryption.
+Calls use real browser WebRTC and need microphone/camera permission.
+Use localhost or HTTPS. Calls across restrictive networks require a TURN server.
+Demo contacts do not automatically reply; open a second account to interact.
+
+DATA
+Your accounts, conversations, and uploads are stored in data/ after first run.
+Restarting the app preserves your data. Do not delete this folder to fix an
+installation problem. Back it up with the server stopped.
+
+MORE DETAILS
+README.md                 Features, commands, and troubleshooting
+docs/ARCHITECTURE.md       Source structure, data model, and API guide
+docs/DEPLOYMENT.md         Docker, HTTPS, persistent disk, and TURN configuration
+docs/TESTING.md            Automated coverage and manual browser checks
+
+Independent educational project. Not affiliated with WhatsApp or Meta.
